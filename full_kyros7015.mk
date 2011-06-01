@@ -21,6 +21,7 @@ PRODUCT_COPY_FILES += \
     device/coby/kyros7015/init.rc:root/init.rc
 
 PRODUCT_COPY_FILES += \
+    device/coby/kyros7015/init.d/10softmac:system/etc/init.d/10softmac \
     device/coby/kyros7015/etc/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
     device/coby/kyros7015/etc/vold.fstab:system/etc/vold.fstab \
     device/coby/kyros7015/etc/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
@@ -39,7 +40,6 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/fonts/MTLmr3m.ttf:system/fonts/MTLmr3m.ttf
 
 PRODUCT_PACKAGES += \
-    makesoftmac.sh \
     tccgetserial
 
 $(call inherit-product, build/target/product/full.mk)
