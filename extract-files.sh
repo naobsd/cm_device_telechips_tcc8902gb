@@ -20,7 +20,8 @@ DEVICE=kyros7015
 MANUFACTURER=coby
 
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /lib/modules/tcc92xx_nand.ko ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/tcc92xx_nand.ko
+adb pull /lib/modules/tcc_mtd.ko ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/tcc_mtd.ko
+adb pull /lib/modules/tcc_nand.ko ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/tcc_nand.ko
 adb pull /lib/modules/ufsd.ko ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/ufsd.ko
 adb pull /system/etc/asound.conf ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/asound.conf
 adb pull /system/lib/egl/libEGL_mali.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libEGL_mali.so
@@ -88,7 +89,8 @@ PRODUCT_COPY_FILES := \\
 
 # All the blobs necessary for kyros7015
 PRODUCT_COPY_FILES += \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/tcc92xx_nand.ko:root/lib/modules/tcc92xx_nand.ko \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/tcc_mtd.ko:root/lib/modules/tcc_mtd.ko \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/tcc_nand.ko:root/lib/modules/tcc_nand.ko \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/ufsd.ko:root/lib/modules/ufsd.ko \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/asound.conf:system/etc/asound.conf \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libEGL_mali.so:system/lib/egl/libEGL_mali.so \\
