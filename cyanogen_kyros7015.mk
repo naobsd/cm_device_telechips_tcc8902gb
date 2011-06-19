@@ -2,7 +2,7 @@
 $(call inherit-product, device/coby/kyros7015/full_kyros7015.mk)
 
 # Inherit some common cyanogenmod stuff.
-$(call inherit-product, vendor/cyanogen/products/common_full.mk)
+$(call inherit-product, vendor/cyanogen/products/common.mk)
 
 # Include GSM stuff
 $(call inherit-product, vendor/cyanogen/products/gsm.mk)
