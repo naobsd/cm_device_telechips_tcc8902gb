@@ -7,6 +7,9 @@ $(call inherit-product, vendor/cyanogen/products/common.mk)
 # Include GSM stuff
 $(call inherit-product, vendor/cyanogen/products/gsm.mk)
 
+# Include extra dictionaries for LatinIME
+PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/dictionaries
+
 #
 # Setup device specific product configuration.
 #
