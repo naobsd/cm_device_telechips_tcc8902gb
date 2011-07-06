@@ -1,5 +1,5 @@
 #
-# system.prop for kyros7015
+# system.prop for tcc8902gb
 #
 dalvik.vm.dexopt-data-only=1
 dalvik.vm.dexopt-flags=m=y

@@ -14,8 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE=kyros7015
-MANUFACTURER=coby
+DEVICE=tcc8902gb
+MANUFACTURER=telechips
 
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE
 

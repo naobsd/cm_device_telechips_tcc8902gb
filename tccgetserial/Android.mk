@@ -1,4 +1,4 @@
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),kyros7015)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),tcc8902gb)
 
 LOCAL_PATH := $(call my-dir)
 

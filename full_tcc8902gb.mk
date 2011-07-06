@@ -3,13 +3,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/coby/kyros7015/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/telechips/tcc8902gb/device-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/coby/kyros7015/overlay
+DEVICE_PACKAGE_OVERLAYS += device/telechips/tcc8902gb/overlay
 
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/coby/kyros7015/kernel
+	LOCAL_KERNEL := device/telechips/tcc8902gb/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -18,14 +18,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 PRODUCT_COPY_FILES += \
-    device/coby/kyros7015/init.rc:root/init.rc
+    device/telechips/tcc8902gb/init.rc:root/init.rc
 
 PRODUCT_COPY_FILES += \
-    device/coby/kyros7015/init.d/10softmac:system/etc/init.d/10softmac \
-    device/coby/kyros7015/init.d/11pointercal:system/etc/init.d/11pointercal \
-    device/coby/kyros7015/etc/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
-    device/coby/kyros7015/etc/vold.fstab:system/etc/vold.fstab \
-    device/coby/kyros7015/etc/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+    device/telechips/tcc8902gb/init.d/10softmac:system/etc/init.d/10softmac \
+    device/telechips/tcc8902gb/init.d/11pointercal:system/etc/init.d/11pointercal \
+    device/telechips/tcc8902gb/etc/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
+    device/telechips/tcc8902gb/etc/vold.fstab:system/etc/vold.fstab \
+    device/telechips/tcc8902gb/etc/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
@@ -44,5 +44,5 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_kyros7015
-PRODUCT_DEVICE := kyros7015
+PRODUCT_NAME := full_tcc8902gb
+PRODUCT_DEVICE := tcc8902gb
