@@ -23,10 +23,11 @@ mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 
 unzip -j -o ../../../${DEVICE}_update.zip boot.img
 unpackbootimg -i boot.img
-gunzip -c boot.img-ramdisk.gz | cpio -idmuv lib/modules/tcc_mtd.ko
-gunzip -c boot.img-ramdisk.gz | cpio -idmuv lib/modules/tcc_nand.ko
-gunzip -c boot.img-ramdisk.gz | cpio -idmuv lib/modules/ufsd.ko
 mv boot.img-zImage kernel
+gunzip -c boot.img-ramdisk.gz | cpio -idmuv \
+    lib/modules/tcc_mtd.ko \
+    lib/modules/tcc_nand.ko \
+    lib/modules/ufsd.ko
 mv lib/modules/* ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 PAGESIZE=$((0x`cat boot.img-pagesize`))
 cat <<EOF > BoardConfig.pagesize.mk
