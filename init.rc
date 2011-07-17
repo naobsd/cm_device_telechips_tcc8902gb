@@ -343,10 +343,14 @@ on boot
     chmod 0666 /dev/component
     chown root video /dev/composite
     chmod 0666 /dev/composite
+    chown root system /dev/egalax_i2c
+    chmod 0666 /dev/egalax_i2c
     chown root video /dev/graphic
     chmod 0666 /dev/graphic
     chown root video /dev/hdmi
     chmod 0666 /dev/hdmi
+    chown root system /dev/hidraw0
+    chmod 0666 /dev/hidraw0
     chown root video /dev/hpd
     chmod 0666 /dev/hpd
     chown root video /dev/i2c-0
