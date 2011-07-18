@@ -4,4 +4,4 @@ add_lunch_combo cyanogen_m701gb_8k-eng
 add_lunch_combo cyanogen_miscrollgb_8k-eng
 add_lunch_combo cyanogen_p7sgb_8k-eng
 add_lunch_combo cyanogen_scroll7cgb_8k-eng
-add_lunch_combo cyanogen_x6gb_8k-eng
+add_lunch_combo cyanogen_x6gb-eng
