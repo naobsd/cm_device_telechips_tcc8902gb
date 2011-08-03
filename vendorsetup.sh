@@ -1,5 +1,5 @@
 add_lunch_combo cyanogen_concorde71gb-eng
-add_lunch_combo cyanogen_em81gb-eng
+add_lunch_combo cyanogen_gpad802gb-eng
 add_lunch_combo cyanogen_kyros7015gb-eng
 add_lunch_combo cyanogen_m1001gb-eng
 add_lunch_combo cyanogen_m1001gb_8k-eng
