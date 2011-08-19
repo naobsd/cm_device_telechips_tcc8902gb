@@ -2,6 +2,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/cyanogen_concorde71gb.mk \
     $(LOCAL_DIR)/cyanogen_gpad802gb.mk \
     $(LOCAL_DIR)/cyanogen_kyros7015gb.mk \
+    $(LOCAL_DIR)/cyanogen_kyros7016gb_8k.mk \
     $(LOCAL_DIR)/cyanogen_m1001gb.mk \
     $(LOCAL_DIR)/cyanogen_m1001gb_8k.mk \
     $(LOCAL_DIR)/cyanogen_m701gb.mk \
