@@ -1,5 +1,6 @@
 on early-init
     insmod /lib/modules/tcc_mtd.ko
+    insmod /lib/modules/tcc_nand.ko
     start ueventd
 
 on init
