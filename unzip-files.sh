@@ -25,8 +25,7 @@ unzip -j -o ../../../${DEVICE}_update.zip boot.img
 unpackbootimg -i boot.img
 mv boot.img-zImage kernel
 gunzip -c boot.img-ramdisk.gz | cpio -idmuv \
-    lib/modules/tcc_mtd.ko \
-    lib/modules/tcc_nand.ko
+    lib/modules/tcc_mtd.ko
 mv lib/modules/* ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 PAGESIZE=$((0x`cat boot.img-pagesize`))
 cat <<EOF > BoardConfig.pagesize.mk
@@ -51,6 +50,7 @@ unzip -j -o ../../../${DEVICE}_update.zip system/lib/libaudio.so -d ../../../ven
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libaudiopolicy.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libpmap.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/modules/mali.ko -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/modules/tcc_nand.ko -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/modules/ufsd.ko -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/modules/ump.ko -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/usr/keylayout/telechips_keypad.kl -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -101,8 +101,8 @@ PRODUCT_COPY_FILES += \\
 
 # All the blobs necessary for tcc8902gb
 PRODUCT_COPY_FILES += \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/tcc_nand.ko:recovery/root/lib/modules/tcc_nand.ko \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/tcc_mtd.ko:root/lib/modules/tcc_mtd.ko \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/tcc_nand.ko:root/lib/modules/tcc_nand.ko \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/asound.conf:system/etc/asound.conf \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libEGL_mali.so:system/lib/egl/libEGL_mali.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \\
@@ -119,6 +119,7 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libaudiopolicy.so:system/lib/libaudiopolicy.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libpmap.so:system/lib/libpmap.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/mali.ko:system/lib/modules/mali.ko \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/tcc_nand.ko:system/lib/modules/tcc_nand.ko \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/ufsd.ko:system/lib/modules/ufsd.ko \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/ump.ko:system/lib/modules/ump.ko \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/telechips_keypad.kl:system/usr/keylayout/telechips_keypad.kl \\

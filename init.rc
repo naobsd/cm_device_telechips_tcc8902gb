@@ -314,7 +314,7 @@ on boot
     setprop net.tcp.buffersize.edge    4093,26280,35040,4096,16384,35040
     setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
 
-    insmod /lib/modules/tcc_nand.ko
+    insmod /system/lib/modules/tcc_nand.ko
     #insmod /system/lib/modules/ufsd.ko
     insmod /system/lib/modules/ump.ko ump_memory_size=0x3000000
     insmod /system/lib/modules/mali.ko mali_memory_size=0x12C00000
