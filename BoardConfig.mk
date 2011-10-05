@@ -51,4 +51,3 @@ BOARD_HAVE_BLUETOOTH := true
 
 BOARD_EGL_CFG := device/telechips/common/egl.cfg
 BOARD_NO_RGBX_8888 := true
-TARGET_USES_16BPPSURFACE_FOR_OPAQUE := true
