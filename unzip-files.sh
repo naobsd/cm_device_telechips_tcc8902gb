@@ -27,7 +27,7 @@ mv boot.img-zImage kernel
 gunzip -c boot.img-ramdisk.gz | cpio -idmuv \
     lib/modules/tcc_mtd.ko
 mv lib/modules/* ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-PAGESIZE=$((0x`cat boot.img-pagesize`))
+PAGESIZE=`cat boot.img-pagesize`
 cat <<EOF > BoardConfig.pagesize.mk
 BOARD_KERNEL_PAGESIZE := ${PAGESIZE}
 BOARD_NAND_PAGE_SIZE := ${PAGESIZE} -s $((PAGESIZE/32))
