@@ -19,7 +19,7 @@ on init
     mkdir /system
     mkdir /data
     mkdir /cache
-    mount /tmp /tmp tmpfs
+    mount tmpfs tmpfs /tmp
 
 on boot
 
